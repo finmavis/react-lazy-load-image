@@ -1,25 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
+// Dependencies
+import React, { Fragment } from 'react';
+
+// Styles
 import './App.css';
+
+// Images
+import ImagesHD from './assets/images/iamges-hd.jpg';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <h1 className='heading'>React Lazy Load Images</h1>
+      <div className='lazy-load-container'>
+        <img src={ImagesHD} alt='Lazy Load Example' />
+      </div>
+    </Fragment>
   );
 }
 
