@@ -18,10 +18,19 @@ body {
 .heading {
   padding-top: 2.5rem;
   text-align: center;
+  margin-bottom: 2.5rem;
 }
 
 .lazy-load-container {
   width: 100%;
   max-width: 650px;
   padding-bottom: calc(650px / 1.5);
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url('./assets/images/svg-version.svg');
+  background-size: cover;
+}
+
+img {
+  width: 100%;
 }
