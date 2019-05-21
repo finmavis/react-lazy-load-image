@@ -1,27 +1,23 @@
 // Dependencies
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment } from 'react';
+
+// Components
+import BackgroundImage from './components/BackgroundImage';
+import LQIP from './components/LQIP';
+import TracedSVG from './components/TracedSVG';
+import Skeleton from './components/Skeleton';
 
 // Styles
 import './App.css';
 
-// Images
-import ImagesHD from './assets/images/hd-version.jpg';
-
 function App() {
-  useEffect(() => {
-    const image = new Image();
-    image.src = ImagesHD;
-    image.onload = function() {
-      const el = document.querySelector('.lazy-load-container');
-      el.style['background-image'] = `url(${ImagesHD})`;
-      el.classList.add('loaded');
-    };
-  }, []);
-
   return (
     <Fragment>
       <h1 className='heading'>React Lazy Load Images</h1>
-      <div className='lazy-load-container' />
+      <BackgroundImage />
+      <LQIP />
+      <TracedSVG />
+      <Skeleton />
     </Fragment>
   );
 }
